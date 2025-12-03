@@ -1,5 +1,5 @@
-name: random_number_generator
-description: "A new Flutter project."
+name: lotto_number_picker
+description: "A random lottery number generator for web."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

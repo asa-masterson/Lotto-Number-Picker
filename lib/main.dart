@@ -147,6 +147,10 @@ class _HomePageState extends State<HomePage> {
         ? 'Pick a number'
         : 'Pick ${_ordinal(pickedNumbers.length + 1)} number';
 
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final bool isDesktop = screenWidth > 600;
+    final double fieldWidth = isDesktop ? 250 : screenWidth - 40;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -220,7 +224,7 @@ class _HomePageState extends State<HomePage> {
                     runSpacing: 16,
                     children: [
                       SizedBox(
-                        width: 250,
+                        width: fieldWidth,
                         child: TextField(
                           controller: minController,
                           keyboardType: TextInputType.number,
@@ -231,7 +235,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       SizedBox(
-                        width: 250,
+                        width: fieldWidth,
                         child: TextField(
                           controller: maxController,
                           keyboardType: TextInputType.number,
